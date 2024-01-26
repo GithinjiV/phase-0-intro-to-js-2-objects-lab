@@ -3,26 +3,26 @@ const employee = {
     streetAddress: "Sandy Park Esate"
   };
   
-  function updateEmployeeWithKeyAndValue(driver, key, value) {
-    return Object.assign({}, driver, { [key]: value });
+  function updateEmployeeWithKeyAndValue(employee, key, value) {
+    return Object.assign({}, employee, { [key]: value });
   }
   
-  function destructivelyUpdateEmployeeWithKeyAndValue(driver, key, value) {
-    driver[key] = value;
+  function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
+    employee[key] = value;
   
-    return driver;
+    return employee;
   }
   
-  function deleteFromEmployeeByKey(driver, key) {
-    const newObj = Object.assign({}, driver);
+  function deleteFromEmployeeByKey(employee, key) {
+    const newObj = Object.assign({}, employee);
   
     delete newObj[key];
   
     return newObj;
   }
   
-  function destructivelyDeleteFromEmployeeByKey(driver, key) {
-    delete driver[key];
+  function destructivelyDeleteFromEmployeeByKey(employee, key) {
+    delete employee[key];
   
-    return driver;
+    return employee;
   }
